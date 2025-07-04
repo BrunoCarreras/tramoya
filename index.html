@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TRAMOYA.SF</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<a href="https://wa.me/5493424301321" target="_blank" class="whatsapp-boton">
+  <img src="img/logowsp.jpg" alt="WhatsApp">
+</a>
+<body>
+  <header class="navbar">
+    <div class="logo">TRAMOYA</div>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#">Galería</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+<section class="slider-principal">
+  <img src="img/remeraslide1.jpg" alt="Destacado 1" class="slide active">
+  <img src="img/remeraslide2.jpg" alt="Destacado 2" class="slide">
+  <img src="img/remeraslide3.jpg" alt="Destacado 3" class="slide">
+</section>
+
+
+  <main class="contenedor">
+    <div class="card" data-id="producto1">
+      <h4>Remera Negra Clásica</h4>
+      <div class="img-container">
+        <img src="img/remeranegra.jpg" alt="Producto 1" class="product-image">
+        <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
+        <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <h4>Remera negra con bordado Sol de Mayo en color dorado</h4>
+    </div>
+
+    <div class="card" data-id="producto2">
+      <h4>Remera Beige Clásica</h4>
+      <div class="img-container">
+        <img src="img/remerabeige.jpg" alt="Producto 2" class="product-image">
+        <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
+        <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <h4>Remera beige con bordado Sol de Mayo en color blanco</h4>
+    </div>
+
+    <div class="card" data-id="producto3">
+      <h4>Remera Todo Negro</h4>
+      <div class="img-container">
+        <img src="img/remeranegra2.jpg" alt="Producto 3" class="product-image">
+        <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
+        <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <h4>Remera negra con bordado Sol de Mayo en color negro</h4>
+    </div>
+
+    <div class="card" data-id="producto4">
+      <h4>Buzo Blanco Clasico</h4>
+      <div class="img-container">
+        <img src="img/buzoblanco.jpg" alt="Producto 4" class="product-image">
+        <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
+        <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <h4>Buzo blanco con bordado Sol de Mayo en color dorado</h4>
+    </div>
+
+    <div class="card" data-id="producto5">
+      <h4>Remera Blanca Clasica</h4>
+      <div class="img-container">
+        <img src="img/remera2.jpg" alt="Producto 5" class="product-image">
+        <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
+        <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <h4>Remera blanca con bordado Sol de Mayo en color dorado</h4>
+    </div>
+
+    <div class="card" data-id="producto6">
+      <h4>Remera Blanca Básica</h4>
+      <div class="img-container">
+        <img src="img/remeranegra.jpg" alt="Producto 6" class="product-image">
+        <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
+        <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <h4>Remera blanca con bordado negro sutil</h4>
+    </div
+
+      ><script>
+            const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav-links");
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("visible");
+    });
+
+    const galeria = {
+      producto1: ["img/remeranegra.jpg", "img/zoomRemeraNegra.jpg"],
+      producto2: ["img/remerabeige.jpg", "img/zoomRemeraBeige.jpg"],
+      producto3: ["img/remeranegra2.jpg", "img/zoomRemeraNegra2.jpg"],
+      producto4: ["img/buzoblanco.jpg", "img/zoombuzoblanco.jpg"],
+      producto5: ["img/remera2.jpg", "img/zoomremera2.jpg"],
+      producto6: ["img/remeranegra.jpg", "img/zoomRemeranegra.jpg"]
+    };
+
+    document.querySelectorAll('.card').forEach((card) => {
+      const id = card.dataset.id;
+      const imagenes = galeria[id];
+      if (!imagenes) return;
+
+      let i = 0;
+      const img = card.querySelector('.product-image');
+      const btnIzq = card.querySelector('.flecha.izquierda');
+      const btnDer = card.querySelector('.flecha.derecha');
+
+      function cambiarImagen(index) {
+        img.classList.add('fade');
+        setTimeout(() => {
+          img.src = imagenes[index];
+          img.classList.remove('fade');
+        }, 200);
+      }
+
+      btnDer.addEventListener('click', () => {
+        i = (i + 1) % imagenes.length;
+        cambiarImagen(i);
+      });
+
+      btnIzq.addEventListener('click', () => {
+        i = (i - 1 + imagenes.length) % imagenes.length;
+        cambiarImagen(i);
+      });
+    });
+  // Slider automático
+  const slides = document.querySelectorAll(".slider-principal .slide");
+  let currentSlide = 0;
+
+  function mostrarSiguienteSlide() {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }
+
+  setInterval(mostrarSiguienteSlide, 4000); // Cambia cada 4 segundos
+      </script>
+
+      
+</body>
+</html>
+
+
+

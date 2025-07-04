@@ -1,0 +1,222 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #01925a;
+  color: white;
+  padding: 1rem;
+  z-index: 1000; /* Se mantiene por encima de todo */
+}
+
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: rgb(180, 180, 180);
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Contenedor de tarjetas con Grid */
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; /* Reducido el espacio entre tarjetas */
+  padding: 3rem 2rem 2rem; /* Aumentado margen top */
+  justify-items: center;
+  padding-top: 6rem
+}
+
+/* Estilo de cada tarjeta */
+.card {
+  background-color: white;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover efecto zoom */
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.card h4 {
+  text-align: center;
+  color: #222;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card p {
+  text-align: center;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Contenedor imagen con flechas */
+.img-container {
+  position: relative;
+  width: 100%;
+}
+
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.flecha.izquierda {
+  left: 10px;
+}
+
+.flecha.derecha {
+  right: 10px;
+}
+
+/* Transición suave de imagen */
+.product-image {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.product-image.fade {
+  opacity: 0;
+}
+
+/* Slider principal mejorado */
+.slider-principal {
+  margin-top: 5.5rem; /* espacio por navbar */
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-principal .slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.slider-principal .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.whatsapp-boton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-boton img {
+  width: 100%;
+  height: 100%;
+}
+
+.whatsapp-boton:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive tablets: 2 columnas */
+@media (max-width: 1024px) {
+  .contenedor {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive móviles: 1 columna */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #01925a;
+    padding: 1rem;
+  }
+
+  .nav-links.visible {
+    display: flex;
+  }
+
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
