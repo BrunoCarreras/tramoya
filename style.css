@@ -19,7 +19,7 @@ body {
   background: #01925a;
   color: white;
   padding: 1rem;
-  z-index: 1000; /* Se mantiene por encima de todo */
+  z-index: 1000;
 }
 
 
@@ -54,8 +54,8 @@ body {
 .contenedor {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem; /* Reducido el espacio entre tarjetas */
-  padding: 3rem 2rem 2rem; /* Aumentado margen top */
+  gap: 1.5rem; 
+  padding: 3rem 2rem 2rem; 
   justify-items: center;
   padding-top: 6rem
 }
@@ -140,7 +140,7 @@ body {
 
 /* Slider principal mejorado */
 .slider-principal {
-  margin-top: 5.5rem; /* espacio por navbar */
+  margin-top: 5.5rem;
   width: 100%;
   height: 300px;
   position: relative;
