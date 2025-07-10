@@ -22,9 +22,10 @@
   </header>
 
 <section class="slider-principal">
-  <img src="img/remeraslide1.jpg" alt="Destacado 1" class="slide active">
-  <img src="img/remeraslide2.jpg" alt="Destacado 2" class="slide">
-  <img src="img/remeraslide3.jpg" alt="Destacado 3" class="slide">
+  <img src="img/RemerasSlide1.jpg" alt="Destacado 1" class="slide active">
+  <img src="img/RemerasSlide2.jpg" alt="Destacado 2" class="slide">
+  <img src="img/RemerasSlide3.jpg" alt="Destacado 3" class="slide">
+  <img src="img/RemerasSlide4.jpg" alt="Destacado 3" class="slide">
 </section>
 
 
@@ -32,7 +33,7 @@
     <div class="card" data-id="producto1">
       <h4>Remera Negra Clásica</h4>
       <div class="img-container">
-        <img src="img/remeranegra.jpg" alt="Producto 1" class="product-image">
+        <img src="img/RemeraNegra.jpg" alt="Producto 1" class="product-image">
         <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
         <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
       </div>
@@ -42,7 +43,7 @@
     <div class="card" data-id="producto2">
       <h4>Remera Beige Clásica</h4>
       <div class="img-container">
-        <img src="img/remerabeige.jpg" alt="Producto 2" class="product-image">
+        <img src="img/RemeraBeige.jpg" alt="Producto 2" class="product-image">
         <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
         <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
       </div>
@@ -52,7 +53,7 @@
     <div class="card" data-id="producto3">
       <h4>Remera Todo Negro</h4>
       <div class="img-container">
-        <img src="img/remeranegra2.jpg" alt="Producto 3" class="product-image">
+        <img src="img/RemeraNegra2.jpg" alt="Producto 3" class="product-image">
         <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
         <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
       </div>
@@ -62,7 +63,7 @@
     <div class="card" data-id="producto4">
       <h4>Buzo Blanco Clasico</h4>
       <div class="img-container">
-        <img src="img/buzoblanco.jpg" alt="Producto 4" class="product-image">
+        <img src="img/BuzoBlanco.jpg" alt="Producto 4" class="product-image">
         <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
         <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
       </div>
@@ -72,7 +73,7 @@
     <div class="card" data-id="producto5">
       <h4>Remera Blanca Clasica</h4>
       <div class="img-container">
-        <img src="img/remera2.jpg" alt="Producto 5" class="product-image">
+        <img src="img/Remera2.jpg" alt="Producto 5" class="product-image">
         <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
         <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
       </div>
@@ -80,14 +81,24 @@
     </div>
 
     <div class="card" data-id="producto6">
-      <h4>Remera Blanca Básica</h4>
+      <h4>Remera Negra Basica</h4>
       <div class="img-container">
-        <img src="img/remeranegra.jpg" alt="Producto 6" class="product-image">
+        <img src="img/RemeraNegraEscudo.jpg" alt="Producto 6" class="product-image">
         <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
         <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
       </div>
-      <h4>Remera blanca con bordado negro sutil</h4>
-    </div
+      <h4>Remera negra con bordado escudo nacional</h4>
+    </div>
+
+    <div class="card" data-id="producto7">
+      <h4>Remera Beige Blasica</h4>
+      <div class="img-container">
+        <img src="img/RemeraBeigeEscudo.jpg" alt="Producto 6" class="product-image">
+        <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
+        <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <h4>Remera beige con bordado escudo nacional</h4>
+    </div>
 
       ><script>
             const toggle = document.getElementById("menu-toggle");
@@ -97,12 +108,13 @@
     });
 
     const galeria = {
-      producto1: ["img/remeranegra.jpg", "img/zoomRemeraNegra.jpg"],
-      producto2: ["img/remerabeige.jpg", "img/zoomRemeraBeige.jpg"],
-      producto3: ["img/remeranegra2.jpg", "img/zoomRemeraNegra2.jpg"],
-      producto4: ["img/buzoblanco.jpg", "img/zoombuzoblanco.jpg"],
-      producto5: ["img/remera2.jpg", "img/zoomremera2.jpg"],
-      producto6: ["img/remeranegra.jpg", "img/zoomRemeranegra.jpg"]
+      producto1: ["img/RemeraNegra.jpg", "img/ZoomRemeraNegra.jpg"],
+      producto2: ["img/RemeraBeige.jpg", "img/ZoomRemeraBeige.jpg"],
+      producto3: ["img/RemeraNegra2.jpg", "img/ZoomRemeraNegra.jpg"],
+      producto4: ["img/BuzoBlanco.jpg", "img/ZoomBuzoBlanco.jpg"],
+      producto5: ["img/Remera2.jpg", "img/ZoomRemera2.jpg"],
+      producto6: ["img/RemeraNegraEscudo.jpg", "img/RemeraNegraEscudo2.jpg"],
+      producto7: ["img/RemeraBeigeEscudo2.jpg", "img/RemeraBeigeEscudo.jpg"]
     };
 
     document.querySelectorAll('.card').forEach((card) => {
