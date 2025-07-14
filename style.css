@@ -178,6 +178,7 @@ body {
 .whatsapp-boton img {
   width: 100%;
   height: 100%;
+  border-radius: 40%;
 }
 
 .whatsapp-boton:hover {
