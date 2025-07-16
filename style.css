@@ -185,6 +185,16 @@ body {
   transform: scale(1.1);
 }
 
+.nav-links a i {
+  font-size: 1.2rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover i {
+  color: #000000;
+}
+
 /* Responsive tablets: 2 columnas */
 @media (max-width: 1024px) {
   .contenedor {
