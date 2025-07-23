@@ -16,13 +16,30 @@
   <header class="navbar">
     <div class="logo">TRAMOYA</div>
     <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-    <nav class="nav-links" id="nav-links">
-      <a href="#">Inicio</a>
-      <a href="#">Galería</a>
-      <a href="https://instagram.com/tramoya.sf" target="_blank" rel="noopener">
-  <i class="fab fa-instagram"></i>
-</a>
-    </nav>
+<nav class="nav-links" id="nav-links">
+  <a href="#">Inicio</a>
+  <a href="#">Galería</a>
+
+  <div class="dropdown">
+    <button class="dropbtn" onclick="filtrarCategoria('indumentaria')">Indumentaria <i class="fas fa-caret-down"></i></button>
+    <div class="dropdown-content">
+      <a href="#" onclick="filtrarCategoria('buzos')">Buzos</a>
+      <div class="submenu">
+        <a href="#" class="submenu-toggle">Remeras <i class="fas fa-caret-right"></i></a>
+        <div class="submenu-content">
+          <a href="#" onclick="filtrarColor('blanco')">Blanco</a>
+          <a href="#" onclick="filtrarColor('negro')">Negro</a>
+          <a href="#" onclick="filtrarColor('beige')">Beige</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://instagram.com/tramoya.sf" target="_blank" rel="noopener">
+    <i class="fab fa-instagram"></i>
+  </a>
+</nav>
+
   </header>
 
 <section class="slider-principal">
@@ -32,9 +49,8 @@
   <img src="img/RemerasSlide4.jpg" alt="Destacado 3" class="slide">
 </section>
 
-
   <main class="contenedor">
-    <div class="card" data-id="producto1">
+    <div class="card remeras negro" data-id="producto1">
       <h4>Remera Negra Clásica</h4>
       <div class="img-container">
         <img src="img/RemeNegraSol.jpg" alt="Producto 1" class="product-image">
@@ -45,7 +61,7 @@
       <p class="precio">$29.999</p>
     </div>
 
-    <div class="card" data-id="producto2">
+    <div class="card remeras beige" data-id="producto2">
       <h4>Remera Beige Clásica</h4>
       <div class="img-container">
         <img src="img/RemeBeigeSol.jpg" alt="Producto 2" class="product-image">
@@ -56,7 +72,7 @@
       <p class="precio">$29.999</p>
     </div>
 
-    <div class="card" data-id="producto3">
+    <div class="card remeras negro" data-id="producto3">
       <h4>Remera Todo Negro</h4>
       <div class="img-container">
         <img src="img/RemeNegraSol2.jpg" alt="Producto 3" class="product-image">
@@ -67,7 +83,7 @@
       <p class="precio">$29.999</p>
     </div>
 
-    <div class="card" data-id="producto4">
+    <div class="card buzos blanco" data-id="producto4">
       <h4>Buzo Blanco Clasico</h4>
       <div class="img-container">
         <img src="img/BuzoBlancoSol.jpg" alt="Producto 4" class="product-image">
@@ -78,7 +94,7 @@
       <p class="precio">$49.999</p>
     </div>
 
-    <div class="card" data-id="producto5">
+    <div class="card remeras blanco" data-id="producto5">
       <h4>Remera Blanca Clasica</h4>
       <div class="img-container">
         <img src="img/RemeBlancaSol.jpg" alt="Producto 5" class="product-image">
@@ -89,7 +105,7 @@
       <p class="precio">$29.999</p>
     </div>
 
-    <div class="card" data-id="producto6">
+    <div class="card remeras negro" data-id="producto6">
       <h4>Remera Negra Clasica</h4>
       <div class="img-container">
         <img src="img/RemeNegraEscudo.jpg" alt="Producto 6" class="product-image">
@@ -100,7 +116,7 @@
       <p class="precio">$29.999</p>
     </div>
 
-    <div class="card" data-id="producto7">
+    <div class="card remeras beige" data-id="producto7">
       <h4>Remera Beige Clasica</h4>
       <div class="img-container">
         <img src="img/RemeBeigeEscudo.jpg" alt="Producto 6" class="product-image">
@@ -156,7 +172,7 @@
         cambiarImagen(i);
       });
     });
-  // Slider automático
+  
   const slides = document.querySelectorAll(".slider-principal .slide");
   let currentSlide = 0;
 
@@ -169,7 +185,28 @@
   setInterval(mostrarSiguienteSlide, 4000); // Cambia cada 4 segundos
       </script>
 
-      
+<script>
+  function filtrarColor(color) {
+    const cards = document.querySelectorAll('.card.remeras');
+
+    cards.forEach(card => {
+      card.style.display = card.classList.contains(color) ? 'block' : 'none';
+    });
+  }
+
+  function filtrarCategoria(categoria) {
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+      if (categoria === 'indumentaria') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = card.classList.contains(categoria) ? 'block' : 'none';
+      }
+    });
+  }
+</script>
+
 <footer>
   <p>&copy; 2025 TRAMOYA.SF - Todos los derechos reservados</p>
 </footer>

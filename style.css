@@ -5,24 +5,20 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #FFF9E5;
+}
 
-/* Títulos de productos */
 .card h4 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
 
-/* Precio */
 .card .precio {
   font-family: 'Bebas Neue', cursive;
   font-size: 1.4rem;
   color: #111;
-}
-
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #FFF9E5;
 }
 
 /* Navbar */
@@ -35,6 +31,57 @@ body {
   color: white;
   padding: 1rem;
   z-index: 1000;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #4A9782;
+  min-width: 160px;
+  z-index: 1;
+  border: 1px solid #FFF9E5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Submenú */
+.submenu {
+  position: relative;
+}
+
+.submenu-toggle {
+  display: block;
+  cursor: pointer;
+}
+
+.submenu-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 160px;
+  background-color: #4A9782;
+  border: 1px solid #FFF9E5;
+}
+
+.submenu:hover .submenu-content {
+  display: block;
 }
 
 
@@ -65,7 +112,6 @@ body {
   text-decoration: none;
 }
 
-/* Contenedor de tarjetas con Grid */
 .contenedor {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -75,7 +121,6 @@ body {
   padding-top: 6rem
 }
 
-/* Estilo de cada tarjeta */
 .card {
   background-color: FFF9E5;
   border: 1px solid #000000;
@@ -90,10 +135,10 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover efecto zoom */
 .card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  transition: 0.3s ease;
 }
 
 .card img {
@@ -116,7 +161,6 @@ body {
   font-size: 1rem;
 }
 
-/* Contenedor imagen con flechas */
 .img-container {
   position: relative;
   width: 100%;
@@ -143,7 +187,6 @@ body {
   right: 10px;
 }
 
-/* Transición suave de imagen */
 .product-image {
   transition: opacity 0.3s ease-in-out;
   opacity: 1;
@@ -153,7 +196,6 @@ body {
   opacity: 0;
 }
 
-/* Slider principal mejorado */
 .slider-principal {
   margin-top: 4.5rem;
   width: 100%;
@@ -217,6 +259,26 @@ body {
   margin-top: 5px;
 }
 
+.filtros {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filtro-btn {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.filtro-btn:hover {
+  background-color: #444;
+}
+
 
 /* Responsive tablets: 2 columnas */
 @media (max-width: 1024px) {
@@ -225,7 +287,7 @@ body {
   }
 }
 
-/* Responsive móviles: 1 columna */
+/* Responsive móvil: 1 columna */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
