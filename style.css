@@ -37,18 +37,32 @@ body {
 .dropdown {
   position: relative;
   display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
 .dropbtn {
   background-color: #4A9782;
   color: rgb(255, 255, 255);
-  padding: 10px 20px;
+  margin: 0;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  border-radius: 8px;
   transition: background-color 0.3s ease;
 }
+
+.nav-links a,
+.dropbtn {
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+}
+
 
 .dropbtn:hover {
   background-color: #4A9782;
@@ -213,7 +227,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   color: white;
   border: none;
   border-radius: 50%;
@@ -278,7 +292,7 @@ body {
 .whatsapp-boton img {
   width: 100%;
   height: 100%;
-  border-radius: 40%;
+  border-radius: 30%;
 }
 
 .whatsapp-boton:hover {
@@ -292,7 +306,7 @@ body {
 }
 
 .nav-links a:hover i {
-  color: #000000;
+  color: #ffffff;
 }
 
 .precio {
@@ -339,7 +353,7 @@ body {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: #01925a;
+    background: #4A9782;
     padding: 1rem;
   }
 
