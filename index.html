@@ -17,23 +17,30 @@
     <div class="logo">TRAMOYA</div>
     <button class="menu-toggle" id="menu-toggle">&#9776;</button>
 <nav class="nav-links" id="nav-links">
-  <a href="#">Inicio</a>
+  <a href="index.html">Inicio</a>
   <a href="#">Galería</a>
 
-  <div class="dropdown">
-    <button class="dropbtn" onclick="filtrarCategoria('indumentaria')">Indumentaria <i class="fas fa-caret-down"></i></button>
-    <div class="dropdown-content">
-      <a href="#" onclick="filtrarCategoria('buzos')">Buzos</a>
-      <div class="submenu">
-        <a href="#" class="submenu-toggle">Remeras <i class="fas fa-caret-down"></i></a>
-        <div class="submenu-content">
-          <a href="#" onclick="filtrarColor('blanco')">Blanco</a>
-          <a href="#" onclick="filtrarColor('negro')">Negro</a>
-          <a href="#" onclick="filtrarColor('beige')">Beige</a>
-        </div>
+<div class="dropdown">
+  <button class="dropbtn">Indumentaria</button>
+  <div class="dropdown-content">
+    <div class="submenu">
+      <a href="#" onclick="filtrarCategoria('buzos')" class="submenu-toggle">Buzos <i class="fas fa-caret-down"></i></a>
+      <div class="submenu-content">
+        <a href="#" onclick="filtrarColor('blanco', 'buzos')">Blanco</a>
+        <a href="#" onclick="filtrarColor('beige', 'buzos')">Beige</a>
+      </div>
+    </div>
+
+    <div class="submenu">
+      <a href="#" onclick="filtrarCategoria('remeras')" class="submenu-toggle">Remeras <i class="fas fa-caret-down"></i></a>
+      <div class="submenu-content">
+        <a href="#" onclick="filtrarColor('blanco', 'remeras')">Blanco</a>
+        <a href="#" onclick="filtrarColor('negro', 'remeras')">Negro</a>
+        <a href="#" onclick="filtrarColor('beige', 'remeras')">Beige</a>
       </div>
     </div>
   </div>
+</div>
 
   <a href="https://instagram.com/tramoya.sf" target="_blank" rel="noopener">
     <i class="fab fa-instagram"></i>
@@ -72,15 +79,15 @@
       <p class="precio">$30.000</p>
     </div>
 
-    <div class="card remeras negro" data-id="producto3">
-      <h4>Remera Todo Negro</h4>
+    <div class="card buzos beige" data-id="producto3">
+      <h4>Buzo Beige Clasico</h4>
       <div class="img-container">
-        <img src="img/RemeNegraSol2.jpg" alt="Producto 3" class="product-image">
+        <img src="img/BuzoBeigeEscudo.jpg" alt="Producto 3" class="product-image">
         <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
         <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
       </div>
-      <h4>Remera negra con bordado Sol de Mayo en color negro</h4>
-      <p class="precio">$30.000</p>
+      <h4>Buzo Beige con bordado Escudo Nacional</h4>
+      <p class="precio">$50.000</p>
     </div>
 
     <div class="card buzos blanco" data-id="producto4">
@@ -125,6 +132,17 @@
       </div>
       <h4>Remera beige con bordado escudo nacional</h4>
       <p class="precio">$30.000</p>
+    </div>
+    
+        <div class="card buzos beige" data-id="producto8">
+      <h4>Buzo Beige Clasico</h4>
+      <div class="img-container">
+        <img src="img/BuzoBeigeSol.jpg" alt="Producto 6" class="product-image">
+        <button class="flecha izquierda"><i class="fas fa-arrow-left"></i></button>
+        <button class="flecha derecha"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <h4>Buzo Beige con bordado Sol de Mayo en color Dorado</h4>
+      <p class="precio">$50.000</p>
     </div>
 
 <footer>
