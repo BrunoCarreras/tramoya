@@ -68,7 +68,6 @@ body {
   background-color: #4A9782;
 }
 
-/* Contenido del dropdown */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -101,7 +100,6 @@ body {
   background-color: #4A9782;
 }
 
-/* Estilo para el submenu dentro del dropdown */
 .submenu {
   position: relative;
 }
@@ -179,18 +177,96 @@ body {
 }
 
 .card {
-  background-color: FFF9E5;
-  border: 1px solid #000000;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px auto;
+  transition: transform 0.3s;
 }
+
+.card.agotado .product-image {
+  opacity: 0.4;
+}
+
+.etiqueta-agotado {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(255, 0, 0, 0.85);
+  color: white;
+  padding: 4px 8px;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.card.agotado .flecha {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+  margin: 10px 15px 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.card .img-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card .product-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card .flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none;
+}
+
+.card .flecha.izquierda {
+  left: 10px;
+}
+
+.card .flecha.derecha {
+  right: 10px;
+}
+
+.img-container:hover .flecha {
+  display: block;
+}
+
+.card .precio {
+  margin: 10px 15px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
 
 .card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -283,8 +359,8 @@ body {
   bottom: 20px;
   right: 20px;
   z-index: 1001;
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }

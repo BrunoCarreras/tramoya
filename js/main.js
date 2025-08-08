@@ -57,7 +57,7 @@
   setInterval(mostrarSiguienteSlide, 4000); // 4 segundos
   
 
-/*               */
+/*------------*/
 let categoriaSeleccionada = null;
 let colorSeleccionado = null;
 
