@@ -6,14 +6,21 @@
     });
 
     const galeria = {
-      producto1: ["img/RemeNegraSol.jpg", "img/ZRNegraSol.jpg"],
-      producto2: ["img/RemeBeigeSol.jpg", "img/ZRBeigeSol.jpg"],
-      producto3: ["img/BuzoBeigeEscudo.jpg", "img/ZBBeigeEscudo.jpg"],
-      producto4: ["img/BuzoBlancoSol.jpg", "img/ZBBlancoSol.jpg"],
-      producto5: ["img/RemeBlancaSol.jpg", "img/ZRBlancaSol.jpg"],
-      producto6: ["img/RemeNegraEscudo.jpg","img/ZRNegraEscudo.jpg"],
-      producto7: ["img/RemeBeigeEscudo.jpg", "img/ZRBeigeEscudo.jpg"],
-      producto8: ["img/BuzoBeigeSol.jpg", "img/ZBBeigeSol.jpg"],
+      producto1: ["imgremeras/RemeNegraSol.jpg", "imgzoom/ZRNegraSol.jpg"],
+      producto2: ["imgremeras/RemeBeigeSol.jpg", "imgzoom/ZRBeigeSol.jpg"],
+      producto3: ["imgbuzos/BuzoBeigeEscudo.jpg", "imgbuzos/ZBBeigeEscudo.jpg"],
+      producto4: ["imgbuzos/BuzoBlancoSol.jpg", "imgbuzos/ZBBlancoSol.jpg"],
+      producto5: ["imgremeras/RemeBlancaSol.jpg", "imgzoom/ZRBlancaSol.jpg"],
+      producto6: ["imgremeras/RemeNegraEscudo.jpg","imgzoom/ZRNegraEscudo.jpg"],
+      producto7: ["imgremeras/RemeBeigeEscudo.jpg", "imgzoom/ZRBeigeEscudo.jpg"],
+      producto8: ["imgbuzos/BuzoBeigeSol.jpg", "imgbuzos/ZBBeigeSol.jpg"],
+      producto9: ["imgremeras/RemeMarronSol.jpg", "imgzoom/ZRMarronSol.jpg"],
+      producto10: ["imgremeras/RemeAzulBandera.jpg", "imgzoom/ZRAzulBandera.jpg"],
+      producto11: ["imgremeras/RemeBlancaBandera.jpg", "imgzoom/ZRBlancaBandera.jpg"],
+      producto12: ["imgremeras/RemeNegraBandera.jpg", "imgzoom/ZRNegraBandera.jpg"],
+      producto13: ["imgremeras/RemeBlancaSolN.jpg", "imgzoom/ZRBlancaSolN.jpg"],
+      producto14: ["imgremeras/RemeGrisSol.jpg", "imgzoom/ZRGrisSol.jpg"],
+      producto15: ["imgremeras/RemeAzulSol.jpg", "imgzoom/ZRAzulSol.jpg"],
     };
 
     document.querySelectorAll('.card').forEach((card) => {
