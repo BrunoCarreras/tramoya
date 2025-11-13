@@ -70,7 +70,7 @@ function cambiarImagen(index) {
     const diffY = startY - endY;
 
     // distancia mínima horizontal para contar como swipe
-    const umbral = 80; 
+    const umbral = 40; 
 
     // Solo si el movimiento horizontal es claramente mayor al vertical
     if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > umbral) {
