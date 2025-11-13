@@ -32,13 +32,13 @@ document.querySelectorAll('.card').forEach((card) => {
   const btnIzq = card.querySelector('.flecha.izquierda');
   const btnDer = card.querySelector('.flecha.derecha');
 
-  function cambiarImagen(index) {
-    img.classList.add('fade');
-    setTimeout(() => {
-      img.src = imagenes[index];
-      img.classList.remove('fade');
-    }, 200);
-  }
+function cambiarImagen(index) {
+  img.classList.add('deslizando');
+  setTimeout(() => {
+    img.src = imagenes[index];
+    img.classList.remove('deslizando');
+  }, 300); // coincide con la duración del CSS
+}
 
   // Botones flechas
   btnDer.addEventListener('click', () => {
