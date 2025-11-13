@@ -32,15 +32,15 @@ document.querySelectorAll('.card').forEach((card) => {
   const btnIzq = card.querySelector('.flecha.izquierda');
   const btnDer = card.querySelector('.flecha.derecha');
 
-  function cambiarImagen(index) {
-    img.classList.add('fade');
-    setTimeout(() => {
-      img.src = imagenes[index];
-      img.classList.remove('fade');
-    }, 200);
-  }
+function cambiarImagen(index) {
+  img.classList.add('deslizando');
+  setTimeout(() => {
+    img.src = imagenes[index];
+    img.classList.remove('deslizando');
+  }, 300); // coincide con la duración del CSS
+}
 
-/*   // Botones flechas
+  // Botones flechas
   btnDer.addEventListener('click', () => {
     i = (i + 1) % imagenes.length;
     cambiarImagen(i);
@@ -49,22 +49,32 @@ document.querySelectorAll('.card').forEach((card) => {
   btnIzq.addEventListener('click', () => {
     i = (i - 1 + imagenes.length) % imagenes.length;
     cambiarImagen(i);
-  }); */
+  });
 
-  // --- Soporte táctil (swipe) ---
+  // --- Soporte táctil mejorado (swipe) ---
   let startX = 0;
+  let startY = 0;
   let endX = 0;
+  let endY = 0;
 
   img.addEventListener('touchstart', (e) => {
     startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
   });
 
   img.addEventListener('touchend', (e) => {
     endX = e.changedTouches[0].clientX;
-    const diff = startX - endX;
+    endY = e.changedTouches[0].clientY;
 
-    if (Math.abs(diff) > 50) { // distancia mínima para contar como swipe
-      if (diff > 0) {
+    const diffX = startX - endX;
+    const diffY = startY - endY;
+
+    // distancia mínima horizontal para contar como swipe
+    const umbral = 80; 
+
+    // Solo si el movimiento horizontal es claramente mayor al vertical
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > umbral) {
+      if (diffX > 0) {
         // Deslizó a la izquierda → siguiente imagen
         i = (i + 1) % imagenes.length;
       } else {

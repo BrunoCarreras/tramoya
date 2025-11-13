@@ -312,7 +312,7 @@ body {
 
 .img-container {
   position: relative;
-  width: 100%;
+  overflow: hidden;
 }
 
 .flecha {
@@ -337,8 +337,13 @@ body {
 }
 
 .product-image {
-  transition: opacity 0.3s ease-in-out;
-  opacity: 1;
+  width: 100%;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.product-image.deslizando {
+  transform: translateX(-100%);
+  opacity: 0;
 }
 
 .product-image.fade {
