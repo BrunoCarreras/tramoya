@@ -188,18 +188,6 @@ body {
   transition: transform 0.3s;
 }
 
-.etiqueta-agotado {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background-color: rgba(255, 0, 0, 0.85);
-  color: white;
-  padding: 4px 8px;
-  font-weight: bold;
-  border-radius: 4px;
-  font-size: 0.9rem;
-}
-
 /* SOLO los productos agotados se verán con blur */
 .card.agotado .product-image {
   filter: blur(3px) brightness(0.7);

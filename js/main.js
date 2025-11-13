@@ -40,7 +40,7 @@ document.querySelectorAll('.card').forEach((card) => {
     }, 200);
   }
 
-  // Botones flechas
+/*   // Botones flechas
   btnDer.addEventListener('click', () => {
     i = (i + 1) % imagenes.length;
     cambiarImagen(i);
@@ -49,7 +49,7 @@ document.querySelectorAll('.card').forEach((card) => {
   btnIzq.addEventListener('click', () => {
     i = (i - 1 + imagenes.length) % imagenes.length;
     cambiarImagen(i);
-  });
+  }); */
 
   // --- Soporte táctil (swipe) ---
   let startX = 0;
