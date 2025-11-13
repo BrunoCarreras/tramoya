@@ -341,10 +341,6 @@ body {
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.product-image.deslizando {
-  transform: translateX(-100%);
-  opacity: 0;
-}
 
 .product-image.fade {
   opacity: 0;
