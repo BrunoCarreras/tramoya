@@ -188,10 +188,6 @@ body {
   transition: transform 0.3s;
 }
 
-.card.agotado .product-image {
-  opacity: 0.4;
-}
-
 .etiqueta-agotado {
   position: absolute;
   top: 8px;
@@ -204,11 +200,36 @@ body {
   font-size: 0.9rem;
 }
 
+/* SOLO los productos agotados se verán con blur */
+.card.agotado .product-image {
+  filter: blur(3px) brightness(0.7);
+  opacity: 0.6;
+}
+
 .card.agotado .flecha {
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
 }
+
+.card.agotado .etiqueta-agotado {
+  display: block;
+}
+
+/* Por defecto, ocultamos la etiqueta "Agotado" */
+.etiqueta-agotado {
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(255, 0, 0, 0.85);
+  color: white;
+  padding: 4px 8px;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
 
 
 .card:hover {
@@ -228,13 +249,19 @@ body {
   overflow: hidden;
 }
 
+/* Imagen normal */
 .card .product-image {
   width: 100%;
   height: auto;
   display: block;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  filter: none;
+  transition: filter 0.3s ease;
 }
+
+
+
 
 .card .flecha {
   position: absolute;
@@ -331,7 +358,7 @@ body {
 }
 
 .slider-principal {
-  margin-top: 4.5rem;
+  margin-top: 4rem;
   width: 100%;
   height: 300px;
   position: relative;
