@@ -51,30 +51,20 @@ document.querySelectorAll('.card').forEach((card) => {
     cambiarImagen(i);
   });
 
-  // --- Soporte táctil mejorado (swipe) ---
+  // --- Soporte táctil (swipe) ---
   let startX = 0;
-  let startY = 0;
   let endX = 0;
-  let endY = 0;
 
   img.addEventListener('touchstart', (e) => {
     startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
   });
 
   img.addEventListener('touchend', (e) => {
     endX = e.changedTouches[0].clientX;
-    endY = e.changedTouches[0].clientY;
+    const diff = startX - endX;
 
-    const diffX = startX - endX;
-    const diffY = startY - endY;
-
-    // distancia mínima horizontal para contar como swipe
-    const umbral = 40; 
-
-    // Solo si el movimiento horizontal es claramente mayor al vertical
-    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > umbral) {
-      if (diffX > 0) {
+    if (Math.abs(diff) > 50) { // distancia mínima para contar como swipe
+      if (diff > 0) {
         // Deslizó a la izquierda → siguiente imagen
         i = (i + 1) % imagenes.length;
       } else {
