@@ -20,6 +20,7 @@ const galeria = {
   producto13: ["imgremeras/RemeBlancaSolN.jpg", "imgzoom/ZRBlancaSolN.jpg"],
   producto14: ["imgremeras/RemeGrisSol.jpg", "imgzoom/ZRGrisSol.jpg"],
   producto15: ["imgremeras/RemeAzulSol.jpg", "imgzoom/ZRAzulSol.jpg"],
+  producto16: ["imgremeras/RemeNegraSolN.jpg", "imgzoom/ZRNegraSolN.jpg"],
 };
 
 document.querySelectorAll('.card').forEach((card) => {
